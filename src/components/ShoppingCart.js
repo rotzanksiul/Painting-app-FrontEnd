@@ -56,7 +56,7 @@ const ShoppingCart = () => {
             }
         ))
 
-        Axios.post('http://localhost:3001/checkout', {
+        Axios.post('https://painting-app-backend.up.railway.app/checkout', {
             items: formattedCartItems
         })
         .then(({data: {url}}) =>{

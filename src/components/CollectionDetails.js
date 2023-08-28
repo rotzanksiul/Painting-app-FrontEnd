@@ -16,7 +16,7 @@ const CollectionDetails = () => {
 
     //Get the current object
     const getCollection = () => {
-        Axios.get(`http://localhost:3001/allcollections/${id}`)
+        Axios.get(`https://painting-app-backend.up.railway.app/allcollections/${id}`)
             .then((response) => {
                 setCollection(response.data)
                 console.log(response.data)

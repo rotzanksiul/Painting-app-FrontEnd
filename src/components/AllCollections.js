@@ -13,7 +13,7 @@ const AllCollections = () => {
     const [paintings, setPaintings] = useState([])
 
     const getPaintings = ()=>{
-        Axios.get('http://localhost:3001/allcollections')
+        Axios.get('https://painting-app-backend.up.railway.app/allcollections')
         .then((response)=>{
             setPaintings(response.data)
         })

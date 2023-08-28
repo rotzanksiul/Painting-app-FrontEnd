@@ -15,7 +15,7 @@ const Home = () => {
 
   //Requests to get the Paintings
   const getPaintings = (() => {
-    Axios.get('http://localhost:3001/')
+    Axios.get('https://painting-app-backend.up.railway.app/')
       .then((response) => {
         //To get the popular slider pictures
         const popularPaintings = response.data.filter((painting) => painting.artist === 'Yuri M');

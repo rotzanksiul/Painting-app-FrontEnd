@@ -16,7 +16,7 @@ const Popular = () => {
     const [paintings, setPaintings] = useState([]);
 
     const popularPaintings = () =>{
-        Axios.get('http://localhost:3001/popular')
+        Axios.get('https://painting-app-backend.up.railway.app/popular')
         .then((response)=>{
             const paintings = response.data.filter((painting) => painting.artist === 'Yuri M');
             setPaintings(paintings)

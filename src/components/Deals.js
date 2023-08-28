@@ -15,7 +15,7 @@ const Deals = () => {
     const [paintings,setPaintings] = useState([]);
 
     const dealsPaintings = ()=>{
-        Axios.get('http://localhost:3001/bestdeals')
+        Axios.get('https://painting-app-backend.up.railway.app/bestdeals')
         .then((response)=>{
             const paintings = response.data.filter((painting)=> painting.price < 200  )
             setPaintings(paintings)
