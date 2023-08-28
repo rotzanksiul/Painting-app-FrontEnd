@@ -23,7 +23,7 @@ const Collections = ({ data }) => {
                     // If the item already exists we increase the quantity
                     if (item._id === painting._id) {
 
-                        UpdateButtonText(painting._id);
+                        setUpdatedItemId(painting._id);
 
                         return { ...item, quantity: item.quantity + 1 };
                     } else {
@@ -31,21 +31,13 @@ const Collections = ({ data }) => {
                     }
                 });
             } else {
-                UpdateButtonText(painting._id);
+                setUpdatedItemId(painting._id);
 
                 return [...currItems, { ...painting, quantity: 1 }];
             }
         });
 
-    };
-
-    //Function to change the button text when adding an item
-    const UpdateButtonText = (itemId) => {
-        setUpdatedItemId(itemId);
-        setTimeout(() => {
-            setUpdatedItemId(null);
-        }, 800);
-    }
+    };   
 
     return (
         <div className="collections">
@@ -60,6 +52,7 @@ const Collections = ({ data }) => {
                                     <div className="card-image-buttons">
                                         <button className='cart-button'
                                             onClick={() => { addToCart(painting) }}
+                                            disabled={updatedItemId === painting._id}
                                         >{updatedItemId === painting._id ? 'Added!' : 'Add to Cart'}</button>
                                         <Link to={`/allcollections/${painting._id}`} className='cart-button'>Quick View</Link>
                                     </div>
