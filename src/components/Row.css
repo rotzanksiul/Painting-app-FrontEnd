@@ -1,0 +1,50 @@
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.row-images{
+    display: grid;
+    gap: .5rem;
+}
+
+.row-image{
+    display: flex;
+    height: 250px;
+}
+
+.row-image img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 350px) {
+    .row-images{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    .row-images{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media screen and (min-width: 950px) {
+    .row-images{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .row-images{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
