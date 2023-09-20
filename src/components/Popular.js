@@ -22,7 +22,7 @@ const Popular = () => {
             setPaintings(paintings)
         })
         .catch((err)=>{
-            console.lof(err)
+            console.error(err)
         })
     }
 

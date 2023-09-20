@@ -19,10 +19,9 @@ const CollectionDetails = () => {
         Axios.get(`https://painting-app-backend.up.railway.app/allcollections/${id}`)
             .then((response) => {
                 setCollection(response.data)
-                console.log(response.data)
             })
             .catch((err) => {
-                console.log(err)
+                console.error(err)
             })
     }
 

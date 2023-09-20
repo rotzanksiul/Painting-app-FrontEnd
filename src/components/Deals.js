@@ -21,7 +21,7 @@ const Deals = () => {
             setPaintings(paintings)
         })
         .catch((err)=>{
-            console.log(err)
+            console.error(err)
         })
     }
 
